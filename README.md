@@ -1,6 +1,9 @@
-## Adicionado listas no controller
+## Adicionando listas no Controller
 
-&amp;lt;?php  
+Nesta etapa, criei um método no `SeriesController` para listar nomes de séries e retornar o HTML diretamente para a rota.
+
+```php
+<?php  
 
 namespace App\Http\Controllers;
 
@@ -9,18 +12,18 @@ class SeriesController
     public function listarSeries()
     {
         $series = [
-            &#39;Lost&#39;,
-            &#39;Game of Thrones&#39;,
-            &#39;See&#39;
+            'Lost',
+            'Game of Thrones',
+            'See'
         ];
 
-        $html = &#39;&amp;lt;ul&amp;gt;&#39;;
+        $html = '<ul>';
 
         foreach ($series as $serie) {
-            $html .= &quot;&amp;lt;li&amp;gt;$serie&amp;lt;/li&amp;gt;&quot;;
+            $html .= "<li>$serie</li>";
         }
 
-        $html .= &#39;&amp;lt;/ul&amp;gt;&#39;;
+        $html .= '</ul>';
 
         return $html;
     }
