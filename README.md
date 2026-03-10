@@ -1,4 +1,4 @@
-###Adicionado listas no controller
+## Adicionado listas no controller
 
 namespace App\Http\Controllers;
 
