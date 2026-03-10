@@ -23,6 +23,20 @@ class SeriesController
             $html .= "<li>$serie</li>";
         }
 
+<?php
+
+
+## Router
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SeriesController;
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+/* Aprendendo rotas */
+Route::get('/series', [SeriesController::class, 'listarSeries']);
+
         $html .= '</ul>';
 
         return $html;
