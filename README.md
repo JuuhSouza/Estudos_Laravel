@@ -1,7 +1,5 @@
 ###Adicionado listas no controller
 
-<?php  
-
 namespace App\Http\Controllers;
 
 class SeriesController{
@@ -21,6 +19,3 @@ class SeriesController{
         echo $html;
     }
 }
-
-/* Aprendendo rotas */
-Route::get('/series', [SeriesController::class, 'listarSeries']);
