@@ -1,5 +1,5 @@
-##Comandos para o laravel:
+## Comandos para o laravel:
 
-#Mostrar funcionalidades
+# Mostrar funcionalidades
 php artisan
 
