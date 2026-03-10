@@ -1,21 +1,27 @@
 ## Adicionado listas no controller
 
+&amp;lt;?php  
+
 namespace App\Http\Controllers;
 
-class SeriesController{
-    public function listarSeries(){
+class SeriesController
+{
+    public function listarSeries()
+    {
         $series = [
-         'Lost',
-         'Game of thrones',
-         'See'
+            &#39;Lost&#39;,
+            &#39;Game of Thrones&#39;,
+            &#39;See&#39;
         ];
 
-        $html = '<ul>';
+        $html = &#39;&amp;lt;ul&amp;gt;&#39;;
 
-        foreach($series as $series){
-            $html .="<li>$series</li>";
+        foreach ($series as $serie) {
+            $html .= &quot;&amp;lt;li&amp;gt;$serie&amp;lt;/li&amp;gt;&quot;;
         }
 
-        echo $html;
+        $html .= &#39;&amp;lt;/ul&amp;gt;&#39;;
+
+        return $html;
     }
 }
