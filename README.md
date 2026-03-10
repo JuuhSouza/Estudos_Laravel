@@ -1,9 +1,9 @@
-## Aprendendo Rotas e Controllers no Laravel
+# 🎬 Projeto Estudos Laravel
 
-Nesta etapa do projeto, configurei uma rota personalizada que chama um método dentro de um Controller para listar séries.
+Documentação do aprendizado sobre Rotas e Controllers.
 
-### 1. Configurando a Rota
-No arquivo `routes/web.php`, adicionei a rota que aponta para o método `listarSeries`:
+## 📍 1. Configurando as Rotas
+As rotas são responsáveis por receber a requisição do navegador. O arquivo editado foi o `routes/web.php`.
 
 ```php
 use Illuminate\Support\Facades\Route;
@@ -13,9 +13,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/* Aprendendo rotas */
+/* Rota que chama o Controller de Séries */
 Route::get('/series', [SeriesController::class, 'listarSeries']);
-```php
+
 <?php  
 
 namespace App\Http\Controllers;
@@ -36,4 +36,8 @@ class SeriesController
             $html .= "<li>$serie</li>";
         }
 
-<?php
+        $html .= '</ul>';
+
+        return $html;
+    }
+}
