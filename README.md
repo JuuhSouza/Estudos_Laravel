@@ -1,7 +1,20 @@
-## Adicionando listas no Controller
+## Aprendendo Rotas e Controllers no Laravel
 
-Nesta etapa, criei um método no `SeriesController` para listar nomes de séries e retornar o HTML diretamente para a rota.
+Nesta etapa do projeto, configurei uma rota personalizada que chama um método dentro de um Controller para listar séries.
 
+### 1. Configurando a Rota
+No arquivo `routes/web.php`, adicionei a rota que aponta para o método `listarSeries`:
+
+```php
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SeriesController;
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+/* Aprendendo rotas */
+Route::get('/series', [SeriesController::class, 'listarSeries']);
 ```php
 <?php  
 
@@ -24,21 +37,3 @@ class SeriesController
         }
 
 <?php
-
-
-## Router
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SeriesController;
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-/* Aprendendo rotas */
-Route::get('/series', [SeriesController::class, 'listarSeries']);
-
-        $html .= '</ul>';
-
-        return $html;
-    }
-}
