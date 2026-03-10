@@ -1,4 +1,3 @@
-Estudos sobre o laravel
 ###Adicionado listas no controller
 
 <?php  
